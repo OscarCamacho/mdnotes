@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.com.camacho.mdnotes.notelist.controllers.NoteListController">
+   <children>
+      <Label layoutX="33.0" layoutY="14.0" text="Markdown Sticky Notes!" textAlignment="CENTER">
+         <font>
+            <Font size="40.0" />
+         </font></Label>
+      <Button fx:id="newNoteButton" layoutX="422.0" layoutY="755.0" mnemonicParsing="false" text="New...">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <ListView fx:id="notesListView" layoutY="69.0" prefHeight="680.0" prefWidth="550.0" />
+      <TextField fx:id="newNoteNameField" layoutX="14.0" layoutY="755.0" prefHeight="38.0" prefWidth="367.0" promptText="Enter the file name..." visible="false">
+         <font>
+            <Font size="20.0" />
+         </font></TextField>
+      <AnchorPane fx:id="noNotesErrorContainer" layoutX="132.0" layoutY="148.0" prefHeight="359.0" prefWidth="287.0" visible="false">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="69.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/anxious.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="97.0" layoutY="200.0" text="Oh no!">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="238.0" prefHeight="25.0" prefWidth="216.0" text="No notes were found." wrapText="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="7.0" layoutY="272.0" text="You should try creating one!">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
